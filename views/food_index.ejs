@@ -29,15 +29,15 @@
   </head>
   <body>
     <h1>Welcome to gitPub</h1>
-    <h1>Drinks</h1>
+    <h1>Food</h1>
 
     <ul>
-      <% for(let i = 0; i < allDrinks.length; i++){ %>
+      <% for(let i = 0; i < allFoods.length; i++){ %>
       <li>
-        <a href="/drinks/<%= i %>"><%= allDrinks[i].name %></a>
+        <a href="/foods/<%= i %>"><%= allFoods[i].name %></a>
       </li>
       <% } %>
     </ul>
-    <a href="http://localhost:3000/foods/">See food list</a>
+    <a href="http://localhost:3000/drinks/">See drinks list</a>
   </body>
 </html>

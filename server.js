@@ -1,4 +1,6 @@
 const drinks = require("./models/drinks.js");
+const foods = require("./models/foods.js");
+console.log(foods);
 
 const express = require("express");
 const app = express();
@@ -15,10 +17,24 @@ app.get("/drinks", (req, res) => {
     allDrinks: drinks,
   });
 });
-// show
+// show drink
 app.get("/drinks/:id", (req, res) => {
   res.render("drinks_show.ejs", {
     drink: drinks[req.params.id],
+  });
+});
+
+// get food
+app.get("/foods", (req, res) => {
+  //   res.send(drinks);
+  res.render("food_index.ejs", {
+    allFoods: foods,
+  });
+});
+// show food
+app.get("/foods/:id", (req, res) => {
+  res.render("food_show.ejs", {
+    food: foods[req.params.id],
   });
 });
 
