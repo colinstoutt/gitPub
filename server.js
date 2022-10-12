@@ -16,6 +16,9 @@ app.get("/drinks", (req, res) => {
   });
 });
 // show
+app.get("/drinks/:id", (req, res) => {
+  res.send("hello");
+});
 
 const port = 3000;
 app.listen(port, () => {
