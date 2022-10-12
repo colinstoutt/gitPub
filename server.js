@@ -17,7 +17,9 @@ app.get("/drinks", (req, res) => {
 });
 // show
 app.get("/drinks/:id", (req, res) => {
-  res.send("hello");
+  res.render("drinks_show.ejs", {
+    drink: drinks[req.params.id],
+  });
 });
 
 const port = 3000;
