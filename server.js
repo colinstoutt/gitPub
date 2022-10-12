@@ -10,7 +10,10 @@ app.get("/", (req, res) => {
 
 // get drinks
 app.get("/drinks", (req, res) => {
-  res.send(drinks);
+  //   res.send(drinks);
+  res.render("drinks_index.ejs", {
+    allDrinks: drinks,
+  });
 });
 // show
 
