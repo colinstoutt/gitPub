@@ -1,3 +1,5 @@
+const drinks = require("./models/drinks.js");
+
 const express = require("express");
 const app = express();
 
@@ -6,6 +8,10 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Gitpub App!");
 });
 
+// get drinks
+app.get("/drinks", (req, res) => {
+  res.send(drinks);
+});
 // show
 
 const port = 3000;
